@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest - My Digital Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>📚 BookNest</h1>
+        <p>Your personal reading space</p>
+    </div>
+    <span class="tagline">Read. Track. Grow.</span>
+</header>
+
+<main>
+    <section class="welcome">
+        <h2>Welcome to your library!</h2>
+        <p>Organize your books and keep track of your reading journey.</p>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <span>Total Books</span>
+            <h2 id="totalBooks">0</h2>
+        </div>
+        <div class="stat-card">
+            <span>Completed</span>
+            <h2 id="readBooks">0</h2>
+        </div>
+        <div class="stat-card">
+            <span>Currently Reading</span>
+            <h2 id="readingBooks">0</h2>
+        </div>
+        <div class="stat-card">
+            <span>Want to Read</span>
+            <h2 id="wantBooks">0</h2>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2 id="formTitle">Add a New Book</h2>
+
+        <form id="bookForm">
+            <input type="hidden" id="editId">
+
+            <input type="text" id="title"
+                placeholder="Book Title" required>
+
+            <input type="text" id="author"
+                placeholder="Author Name" required>
+
+            <select id="category">
+                <option value="Fiction">Fiction</option>
+                <option value="Technology">Technology</option>
+                <option value="Science">Science</option>
+                <option value="Biography">Biography</option>
+                <option value="Self-help">Self-help</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="number" id="pages"
+                placeholder="Total Pages" min="1" required>
+
+            <select id="status">
+                <option value="Want to Read">Want to Read</option>
+                <option value="Currently Reading">Currently Reading</option>
+                <option value="Read">Read</option>
+            </select>
+
+            <input type="number" id="progress"
+                placeholder="Pages Read" min="0" value="0" required>
+
+            <button type="submit" id="submitBtn">
+                Add Book
+            </button>
+
+            <button type="button" id="cancelBtn" class="cancel-btn"
+                hidden>Cancel Edit</button>
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="library">
+        <div class="heading">
+            <h2>My Bookshelf</h2>
+            <span id="bookCount">0 books</span>
+        </div>
+
+        <div class="filters">
+            <input type="search" id="search"
+                placeholder="🔍 Search title or author...">
+
+            <select id="filter">
+                <option value="All">All Books</option>
+                <option value="Want to Read">Want to Read</option>
+                <option value="Currently Reading">Currently Reading</option>
+                <option value="Read">Read</option>
+            </select>
+
+            <select id="sort">
+                <option value="newest">Recently Added</option>
+                <option value="title">Title A–Z</option>
+                <option value="author">Author A–Z</option>
+            </select>
+        </div>
+
+        <div id="bookList" class="book-grid"></div>
+    </section>
+</main>
+
+<footer>
+    <p>BookNest © 2026 | Every Book Opens a New World.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

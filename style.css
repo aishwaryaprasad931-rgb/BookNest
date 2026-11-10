@@ -1,0 +1,272 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f5f1;
+    color: #302b29;
+}
+
+header {
+    background: #49352f;
+    color: white;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #e4d7ce;
+}
+
+.tagline {
+    background: #70564a;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #777;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0000000b;
+}
+
+.stat-card span {
+    color: #888;
+    font-size: 13px;
+}
+
+.stat-card h2 {
+    color: #9b684e;
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+.form-section,
+.library {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px #0000000b;
+}
+
+.form-section h2,
+.library h2 {
+    margin-bottom: 20px;
+}
+
+#bookForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+button {
+    background: #9b684e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #795039;
+}
+
+.cancel-btn {
+    background: #777;
+}
+
+#message {
+    margin-top: 12px;
+    font-size: 14px;
+    color: green;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading span {
+    color: #888;
+    font-size: 13px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters input {
+    flex: 2;
+}
+
+.filters select {
+    flex: 1;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.book-card {
+    border: 1px solid #e8e1db;
+    border-radius: 10px;
+    padding: 18px;
+    background: #fffefa;
+}
+
+.book-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.book-card h3 {
+    margin-bottom: 7px;
+    overflow-wrap: anywhere;
+}
+
+.book-card p {
+    color: #888;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.book-category {
+    display: inline-block;
+    background: #f1e6df;
+    color: #80543f;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.fav-btn {
+    background: transparent;
+    color: #c77c59;
+    width: auto;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.progress-container {
+    background: #eae5e1;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #9b684e;
+    transition: width 0.3s;
+}
+
+.book-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.book-actions button {
+    width: auto;
+    padding: 9px 12px;
+    font-size: 12px;
+}
+
+.delete-btn {
+    background: #d94b4b;
+}
+
+.delete-btn:hover {
+    background: #b72e2e;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px;
+    color: #888;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #bookForm,
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+}
